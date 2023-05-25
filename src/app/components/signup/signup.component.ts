@@ -24,7 +24,7 @@ export class SignupComponent implements OnInit {
 
   sendSignInLink(email: string) {
     const actionCodeSettings = {
-      url: 'https://iandigo.web.app/page-not-found', // Replace with your app's URL
+      url: 'https://iandigo.web.app/home', // Replace with your app's URL
       handleCodeInApp: true,
     };
 

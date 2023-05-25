@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AngularFireAuth } from "@angular/fire/compat/auth";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'iandigo-login',
@@ -7,7 +8,7 @@ import { AngularFireAuth } from "@angular/fire/compat/auth";
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  constructor(private afAuth: AngularFireAuth) {}
+  constructor(private afAuth: AngularFireAuth, private router: Router) {}
 
   login(email: string, password: string) {
     this.afAuth.signInWithEmailAndPassword(email, password)
@@ -15,7 +16,9 @@ export class LoginComponent {
         // Login successful
         const user = userCredential.user;
         console.log('User logged in:', user);
-        // Additional actions after successful login
+
+        // Redirect to the "/home" page
+        this.router.navigate(['/home']);
       })
       .catch((error) => {
         // Login failed
