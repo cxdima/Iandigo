@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "iandigo-e5cd2": {
+      "hosting": {
+        "iandigo": [
+          "iandigo"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "iandigo-e5cd2"
+  }
+}

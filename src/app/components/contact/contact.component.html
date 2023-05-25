@@ -1,0 +1,36 @@
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header flex-column">
+        <h1 class="text-center fw-bold mt-3" id="contactModalLabel">Get Started</h1>
+        <p class="text-center">Provide your contact details and share your thoughts with us. We will provide you with a login after reviewing your message.</p>
+      </div>
+      <div class="modal-body">
+        <form class="floating-form">
+          <div class="form-floating mb-3">
+            <select class="form-select" id="contactSelectedPlan" name="contactSelectedPlan">
+              <option [value]="'Personal'">Personal</option>
+              <option [value]="'Premium'" [selected]="selectedPlan === 'Premium'">Premium</option>
+              <option [value]="'Business'" [selected]="selectedPlan === 'Business'">Business</option>
+              <option [value]="'Corporate'" [selected]="selectedPlan === 'Corporate'">Corporate</option>
+            </select>
+            <label for="contactSelectedPlan">Selected Plan</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="contactFirstName" name="contactFirstName" required>
+            <label for="contactFirstName">Name</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="contactEmail" name="contactEmail" required>
+            <label for="contactEmail">Email</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" style="height: 10vh;" id="contactMessage" name="contactMessage" required></textarea>
+            <label for="contactMessage">Message</label>
+          </div>
+          <button type="submit" class="btn btn-secondary w-100 py-2">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
