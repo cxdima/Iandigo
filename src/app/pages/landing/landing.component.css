@@ -1,0 +1,91 @@
+.logo {
+  font-size: 35px !important;
+}
+
+.f-logo {
+  font-size: 28px !important;
+}
+
+.expert-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.feature-title {
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+.feature-description {
+  color: var(--secondary);
+}
+
+.feature-box {
+  background: var(--background);
+  border-radius: 1vh;
+  padding: 2vh;
+  height: 100%;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.feature-box:hover {
+  transform: scale(1.02);
+}
+
+
+.price-card {
+  border: var(--primary) 1px solid;
+  padding: 2vh;
+  border-radius: 0.5vh;
+  transition: transform 0.2s ease;
+}
+
+.price-card:hover {
+  transform: scale(1.02);
+}
+
+.price-card-attention {
+  border: none;
+  background: var(--secondary);
+  color: white !important;
+}
+
+.price-card-attention .btn {
+  background: var(--background) !important;
+  color: var(--secondary)
+}
+
+.contact-info {
+  line-height: 3.5vh;
+}
+
+.price-card-header {
+  text-align: center;
+}
+
+.price-card-list {
+  text-align: center;
+}
+
+ul {
+  padding: 0;
+}
+
+.price-card-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.price-card-price {
+  text-transform: uppercase;
+}
+
+.price-card-number {
+  font-size: 48px;
+  margin-left: 1vh;
+}
+
+
