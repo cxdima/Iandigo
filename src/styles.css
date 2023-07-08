@@ -15,10 +15,6 @@ body {
     background: var(--background);
 }
 
-.card-title, .card-text{
-    color: var(--background);
-}
-
 i{
     color: var(--primary);
 }

@@ -15,7 +15,6 @@ import { LandingComponent } from './pages/landing/landing.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
-import { SignupComponent } from './components/signup/signup.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 
@@ -27,7 +26,6 @@ import { HomeComponent } from './pages/home/home.component';
     NavigationComponent,
     FooterComponent,
     LoginComponent,
-    SignupComponent,
     ContactComponent,
     HomeComponent,
   ],
