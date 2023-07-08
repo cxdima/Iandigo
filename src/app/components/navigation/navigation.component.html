@@ -1,7 +1,7 @@
 <div id="navigation" class="navbar navbar-expand-md mt-md-5">
   <div class="container">
     <a class="navbar-brand fw-bolder" href="">
-      <img src="./assets/logo.png" style="width: 40px"/>
+      <img src="./assets/logo.png" (click)="signOut()" style="width: 40px"/>
     </a>
     <button class="navbar-toggler border-0 shadow-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav"
             aria-controls="offcanvasNav">
@@ -43,7 +43,7 @@
               </li>
             </ul>
 
-            <div class="d-flex ms-auto" *ngIf="!isLoggedIn">
+            <div class="d-flex ms-auto">
               <div class="d-none d-md-block">
                 <a href="" class="fw-bold text-white btn btn-secondary mt-2" data-bs-toggle="modal" data-bs-target="#loginModal">
                   LOG IN
@@ -53,7 +53,7 @@
           </div>
         </div>
 
-        <div *ngIf="!isLoggedIn">
+        <div>
           <!--offcanvas bottom section-->
           <ul class="d-block d-md-none nav">
             <hr class="m-0">
@@ -66,10 +66,10 @@
             </li>
           </ul>
         </div>
-
       </div>
     </div>
   </div>
 </div>
 
 <iandigo-login></iandigo-login>
+<iandigo-signup></iandigo-signup>

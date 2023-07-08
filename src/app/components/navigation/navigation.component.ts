@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { AngularFireAuth } from "@angular/fire/compat/auth";
 
 @Component({
   selector: 'iandigo-navigation',
@@ -7,12 +7,17 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent {
-  isLoggedIn = false;
-
-  constructor() {
-    const auth = getAuth();
-    onAuthStateChanged(auth, (user) => {
-      this.isLoggedIn = !!user;
-    });
+  constructor(private afAuth: AngularFireAuth) {}
+  signOut() {
+    this.afAuth.signOut()
+      .then(() => {
+        // Sign-out successful.
+        console.log('User signed out successfully.');
+        // Perform any additional actions after signing out (e.g., redirecting).
+      })
+      .catch((error) => {
+        // An error happened.
+        console.error('Error signing out:', error);
+      });
   }
 }
