@@ -1,15 +1,13 @@
-<div class="container bg-dark py-4 rounded">
-  <h1 class="display-5 fw-bold text-white text-center">This is the home component.</h1>
-</div>
-
 <div class="container bg-dark py-4 rounded mt-3">
-  <div class="card col-6 bg-white text-dark">
-    <div class="card-header"><h5 class="mt-2 fw-bold">User Information</h5></div>
+  <div class="card bg-white text-dark">
+    <div class="card-header d-flex justify-content-between">
+      <h5 class="mt-2 fw-bold">Clients</h5>
+      <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#createUserModal">Create New User</button>
+    </div>
     <div class="card-body">
-      <p class="card-text">Name: Dmitry Moiseenko</p>
-      <p class="card-text">Email: cxdimafeed@gmail.com</p>
-      <p class="card-text">UID: CQfpBaaA8habDRHd18WCh8VUFuH2</p>
-      <p class="card-text">Admin: True</p>
+      <iandigo-client-table></iandigo-client-table>
     </div>
   </div>
 </div>
+
+<iandigo-create-user></iandigo-create-user>

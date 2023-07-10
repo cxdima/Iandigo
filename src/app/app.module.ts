@@ -17,6 +17,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ClientTableComponent } from './components/client-table/client-table.component';
+import { CreateUserComponent } from './components/create-user/create-user.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { HomeComponent } from './pages/home/home.component';
     LoginComponent,
     ContactComponent,
     HomeComponent,
+    ClientTableComponent,
+    CreateUserComponent,
   ],
   imports: [
     BrowserModule,

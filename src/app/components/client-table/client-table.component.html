@@ -1,0 +1,30 @@
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th (click)="sortClients('name')">
+        Name
+        <span *ngIf="sortedColumn === 'name' && sortDirection === 'asc'" class="bi bi-sort-down"></span>
+        <span *ngIf="sortedColumn === 'name' && sortDirection === 'desc'" class="bi bi-sort-up"></span>
+      </th>
+      <th (click)="sortClients('email')">
+        Email
+        <span *ngIf="sortedColumn === 'email' && sortDirection === 'asc'" class="bi bi-sort-down"></span>
+        <span *ngIf="sortedColumn === 'email' && sortDirection === 'desc'" class="bi bi-sort-up"></span>
+      </th>
+      <th (click)="sortClients('uid')">
+        UID
+        <span *ngIf="sortedColumn === 'uid' && sortDirection === 'asc'" class="bi bi-sort-down"></span>
+        <span *ngIf="sortedColumn === 'uid' && sortDirection === 'desc'" class="bi bi-sort-up"></span>
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let client of clients">
+      <td>{{ client.name }}</td>
+      <td>{{ client.email }}</td>
+      <td>{{ client.uid }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,30 @@
+<div class="modal fade" id="createUserModal" tabindex="-1" aria-labelledby="createUserModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container my-4">
+          <div class="mb-4">
+            <h1 class="display-6 fw-semibold text-center">Create User</h1>
+            <p class="lead text-center">Enter the user details to create an account</p>
+          </div>
+          <hr>
+          <form class="mb-3" (ngSubmit)="createUser()" #userForm="ngForm">
+            <div class="form-floating my-4 needs-validation">
+              <input type="text" class="form-control" id="createName" placeholder=" " name="name" [(ngModel)]="name" required>
+              <label for="createName">Name</label>
+            </div>
+            <div class="form-floating my-4 needs-validation">
+              <input type="email" class="form-control" id="createEmail" placeholder=" " name="email" [(ngModel)]="email" required>
+              <label for="createEmail">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="createUID" placeholder=" " name="uid" [(ngModel)]="uid" required>
+              <label for="createUID">UID</label>
+            </div>
+            <button class="btn btn-warning w-100 p-2" type="submit" [disabled]="!userForm.valid">Create User</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
