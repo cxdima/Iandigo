@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { getAuth, onAuthStateChanged, User } from "@angular/fire/auth";
 
 @Component({
   selector: 'iandigo-landing',
@@ -6,12 +7,24 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./landing.component.css'],
 })
 export class LandingComponent {
-  fullName!: string;
-  email!: string;
-  message!: string;
   selectedPlan!: string;
+  name: any | undefined;
+  isLoggedIn: boolean | undefined;
 
   @Output() selectedPlanChange = new EventEmitter<string>();
+
+  ngOnInit() {
+    const auth = getAuth();
+    onAuthStateChanged(auth, (user: User | null) => {
+      if (user) {
+        this.name = user.email;
+        this.isLoggedIn = true;
+      } else {
+        this.name = undefined;
+        this.isLoggedIn = false;
+      }
+    });
+  }
 
   preselectPersonalPlan() {
     this.selectedPlan = 'Personal';

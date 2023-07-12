@@ -9,6 +9,10 @@
     --light: #DAE7FF;
 }
 
+.button-default{
+    border: none;
+    background: inherit;
+}
 
 body {
     font-family: 'Instrument Sans', sans-serif;

@@ -1,4 +1,18 @@
-<section id="page-header" class="mt-4">
+<section id="returning-user" class="my-5">
+  <div class="container bg-dark rounded py-3" *ngIf="isLoggedIn">
+    <div class="d-flex justify-content-between">
+      <h1 class="text-white mb-0">Welcome back!</h1>
+      <a routerLink="/home">
+        <button class="btn text-white mt-1">
+          GO TO HOME
+          <i class="bi bi-arrow-right text-white"></i>
+        </button>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="page-header">
   <div class="container">
     <div class="row justify-content-between">
       <div class="col-lg-7 d-flex flex-column justify-content-evenly">

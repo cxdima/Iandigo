@@ -1,0 +1,27 @@
+.navbar-brand {
+    color: #fffffe;
+    font-size: 32px;
+    padding: 0;
+}
+
+.nav-link {
+    padding: 16px;
+    font-weight: bold;
+}
+
+i {
+    margin-right: 12px;
+}
+
+.btn-outline-primary:hover > span > i {
+    color: var(--background) !important;
+}
+
+section {
+    height: 95vh;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary)
+}

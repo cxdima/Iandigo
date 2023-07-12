@@ -1,4 +1,4 @@
-<div class="table-responsive">
+<div class="table-responsive pt-2">
   <table class="table table-striped">
     <thead>
     <tr>
@@ -17,6 +17,9 @@
         <span *ngIf="sortedColumn === 'uid' && sortDirection === 'asc'" class="bi bi-sort-down"></span>
         <span *ngIf="sortedColumn === 'uid' && sortDirection === 'desc'" class="bi bi-sort-up"></span>
       </th>
+      <th>
+
+      </th>
     </tr>
     </thead>
     <tbody>
@@ -24,6 +27,20 @@
       <td>{{ client.name }}</td>
       <td>{{ client.email }}</td>
       <td>{{ client.uid }}</td>
+      <td>
+        <div class="dropdown">
+          <button class="button-default" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+            <i class="bi bi-three-dots text-dark"></i>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <button class="dropdown-item" (click)="deleteClient(client.uid)">
+              <i class="bi bi-person-x text-black" style="font-size: 18px;"></i>
+              Delete User
+            </button>
+          </div>
+        </div>
+      </td>
     </tr>
     </tbody>
   </table>
