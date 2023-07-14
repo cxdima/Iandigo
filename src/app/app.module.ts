@@ -20,6 +20,9 @@ import { ClientTableComponent } from './components/client-table/client-table.com
 import { CreateUserComponent } from './modals/create-user/create-user.component';
 import { HomeNavigationComponent } from './components/navigation/home-navigation/home-navigation.component';
 import { LandingNavigationComponent } from './components/navigation/landing-navigation/landing-navigation.component';
+import { MessagesComponent } from './components/messages/messages.component';
+import { ClientsComponent } from './components/clients/clients.component';
+import { InvoicesComponent } from './components/invoices/invoices.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +37,9 @@ import { LandingNavigationComponent } from './components/navigation/landing-navi
     CreateUserComponent,
     HomeNavigationComponent,
     LandingNavigationComponent,
+    MessagesComponent,
+    ClientsComponent,
+    InvoicesComponent,
   ],
   imports: [
     BrowserModule,
