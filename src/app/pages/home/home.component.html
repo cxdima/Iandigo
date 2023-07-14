@@ -1,13 +1,75 @@
-<div class="container bg-dark py-4 rounded mt-3">
-  <div class="card bg-white text-dark">
-    <div class="card-header d-flex justify-content-between">
-      <h5 class="mt-2 fw-bold">Clients</h5>
-      <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#createUserModal">Create New User</button>
-    </div>
-    <div class="card-body">
-      <iandigo-client-table></iandigo-client-table>
+<section>
+  <div class="container rounded my-5 px-0">
+    <div class="information-card-container">
+      <div class="information-card-wrapper mb-3">
+
+        <!-- Existing cards -->
+
+        <div class="information-card col-lg-4 col-md-6 col-9 pb-4">
+          <div class="d-flex justify-content-between">
+            <i class="information-card-icon bi bi-people"></i>
+            <button class="button-default"><i class="bi bi-three-dots-vertical"></i></button>
+          </div>
+          <div class="information-card-header mt-3">Total clients</div>
+          <p class="information-card-number">{{totalClients}}</p>
+        </div>
+
+        <div class="information-card col-lg-3 col-md-6 col-9 pb-4">
+          <div class="d-flex justify-content-between">
+            <i class="information-card-icon bi bi-envelope"></i>
+            <button class="button-default"><i class="bi bi-three-dots-vertical"></i></button>
+          </div>
+          <div class="information-card-header mt-3">New messages</div>
+          <p class="information-card-number">192</p>
+        </div>
+
+        <div class="information-card col-lg-4 col-md-6 col-9 pb-4">
+          <div class="d-flex justify-content-between">
+            <i class="information-card-icon bi bi-currency-pound"></i>
+            <button class="button-default"><i class="bi bi-three-dots-vertical"></i></button>
+          </div>
+          <div class="information-card-header mt-3">Total income</div>
+          <p class="information-card-number">18,343.20</p>
+        </div>
+
+        <!-- Additional cards -->
+
+        <div class="information-card col-lg-4 col-md-6 col-9 pb-4">
+          <div class="d-flex justify-content-between">
+            <i class="information-card-icon bi bi-journal-check"></i>
+            <button class="button-default"><i class="bi bi-three-dots-vertical"></i></button>
+          </div>
+          <div class="information-card-header mt-3">Projects Completed</div>
+          <p class="information-card-number">58</p>
+        </div>
+
+        <div class="information-card col-lg-3 col-md-6 col-9 pb-4">
+          <div class="d-flex justify-content-between">
+            <i class="information-card-icon bi bi-globe2"></i>
+            <button class="button-default"><i class="bi bi-three-dots-vertical"></i></button>
+          </div>
+          <div class="information-card-header mt-3">Website Visitors</div>
+          <p class="information-card-number">3,245</p>
+        </div>
+
+        <div class="information-card col-lg-4 col-md-6 col-9 pb-4">
+          <div class="d-flex justify-content-between">
+            <i class="information-card-icon bi bi-graph-up"></i>
+            <button class="button-default"><i class="bi bi-three-dots-vertical"></i></button>
+          </div>
+          <div class="information-card-header mt-3">Revenue Growth</div>
+          <p class="information-card-number">12.5%</p>
+        </div>
+
+      </div>
     </div>
   </div>
-</div>
+</section>
+
+
+
+<iandigo-client-table></iandigo-client-table>
+
+
 
 <iandigo-create-user></iandigo-create-user>

@@ -19,10 +19,6 @@ body {
     background: var(--background);
 }
 
-i{
-    color: var(--primary);
-}
-
 a{
     text-decoration: none;
 }

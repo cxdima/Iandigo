@@ -17,32 +17,35 @@
               <input type="email" class="form-control" id="createEmail" placeholder=" " name="email" [(ngModel)]="email" required>
               <label for="createEmail">Email address</label>
             </div>
-            <div class="form-floating mb-3">
+            <div class="form-floating my-4 needs-validation">
+              <input type="date" class="form-control" id="createSubscriptionDate" placeholder=" " name="subscriptionDate" [(ngModel)]="subscriptionDate" required>
+              <label for="createSubscriptionDate">Subscription Start Date</label>
+            </div>
+            <div class="form-floating my-4 needs-validation">
+              <select class="form-select" id="createSubscriptionType" name="subscriptionType" [(ngModel)]="subscriptionType" required>
+                <option value="Personal">Personal</option>
+                <option value="Premium">Premium</option>
+                <option value="Business">Business</option>
+                <option value="Corporate">Corporate</option>
+              </select>
+              <label for="createSubscriptionType">Subscription Type</label>
+            </div>
+            <div class="form-floating my-4 needs-validation">
+              <input type="number" class="form-control" id="createTotalPaid" placeholder=" " name="totalPaid" [(ngModel)]="totalPaid" min="200" max="3000" required>
+              <label for="createTotalPaid">Total Paid (GBP)</label>
+            </div>
+            <div class="form-floating my-4 needs-validation">
               <input type="text" class="form-control" id="createUID" placeholder=" " name="uid" [(ngModel)]="uid" required>
               <label for="createUID">UID</label>
             </div>
-            <div class="row">
-              <div class="col">
-                <div class="form-floating">
-                  <select class="form-select" id="createClient" name="client" [(ngModel)]="client" required>
-                    <option value="true">True</option>
-                    <option value="false">False</option>
-                  </select>
-                  <label for="createClient">Client</label>
-                </div>
+            <div class="row justify-content-end">
+              <div class="col-12 col-md-4">
+                <button class="btn w-100 p-2 mb-3" type="button" (click)="randomizeFields()">Randomize <i class="bi bi-dice-5 text-black ms-2"></i></button>
               </div>
-              <div class="col mb-4">
-                <div class="form-floating">
-                  <select class="form-select" id="createAdmin" name="admin" [(ngModel)]="admin" required>
-                    <option value="true">True</option>
-                    <option value="false">False</option>
-                  </select>
-                  <label for="createAdmin">Admin</label>
-                </div>
+              <div class="col-12 col-md-8">
+                <button class="btn btn-dark w-100 p-2" type="submit" data-bs-dismiss="modal" [disabled]="!userForm.valid">Create User</button>
               </div>
             </div>
-            <button class="btn btn-dark w-100 p-2" type="submit" data-bs-dismiss="modal" [disabled]="!userForm.valid">Create User</button>
-            <button class="btn btn-warning w-100 p-2 mt-3" type="button" (click)="randomizeFields()">Randomize <i class="bi bi-dice-5 text-black ms-2"></i></button>
           </form>
         </div>
       </div>
