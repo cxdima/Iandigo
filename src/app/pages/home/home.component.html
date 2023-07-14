@@ -1,75 +1,121 @@
 <section>
-  <div class="container rounded my-5 px-0">
+  <div class="container p-0 rounded mt-3">
+    <div class="container py-4 mb-3 bg-dark rounded d-flex justify-content-between align-items-center">
+      <h3 class="fw-bold mb-0 text-white">Dashboard</h3>
+<!--      <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#">-->
+<!--        Add Client-->
+<!--        <i class="bi bi-plus fw-bold" style="font-size:20px"></i>-->
+<!--      </button>-->
+    </div>
     <div class="information-card-container">
-      <div class="information-card-wrapper mb-3">
+      <div class="row">
 
         <!-- Existing cards -->
 
-        <div class="information-card col-lg-4 col-md-6 col-9 pb-4">
-          <div class="d-flex justify-content-between">
-            <i class="information-card-icon bi bi-people"></i>
-            <button class="button-default"><i class="bi bi-three-dots-vertical"></i></button>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-4 pb-4">
+          <div class="information-card">
+            <div class="d-flex justify-content-between">
+              <i class="information-card-icon bi bi-people"></i>
+              <button class="button-default"><i class="bi bi-three-dots-vertical"></i></button>
+            </div>
+            <div class="information-card-header mt-3">Total clients</div>
+            <p class="information-card-number">{{totalClients}}</p>
           </div>
-          <div class="information-card-header mt-3">Total clients</div>
-          <p class="information-card-number">{{totalClients}}</p>
         </div>
 
-        <div class="information-card col-lg-3 col-md-6 col-9 pb-4">
-          <div class="d-flex justify-content-between">
-            <i class="information-card-icon bi bi-envelope"></i>
-            <button class="button-default"><i class="bi bi-three-dots-vertical"></i></button>
+        <div class="col-12 col-md-6 col-lg-3 col-xl-3 pb-4">
+          <div class="information-card">
+            <div class="d-flex justify-content-between">
+              <i class="information-card-icon bi bi-envelope"></i>
+              <button class="button-default"><i class="bi bi-three-dots-vertical"></i></button>
+            </div>
+            <div class="information-card-header mt-3">New messages</div>
+            <p class="information-card-number">192</p>
           </div>
-          <div class="information-card-header mt-3">New messages</div>
-          <p class="information-card-number">192</p>
         </div>
 
-        <div class="information-card col-lg-4 col-md-6 col-9 pb-4">
-          <div class="d-flex justify-content-between">
-            <i class="information-card-icon bi bi-currency-pound"></i>
-            <button class="button-default"><i class="bi bi-three-dots-vertical"></i></button>
+        <div class="col-12 col-md-6 col-lg-5 col-xl-5 pb-4">
+          <div class="information-card">
+            <div class="d-flex justify-content-between">
+              <i class="information-card-icon bi bi-globe2"></i>
+              <button class="button-default"><i class="bi bi-three-dots-vertical"></i></button>
+            </div>
+            <div class="information-card-header mt-3">Website Visitors</div>
+            <p class="information-card-number">3,245</p>
           </div>
-          <div class="information-card-header mt-3">Total income</div>
-          <p class="information-card-number">18,343.20</p>
         </div>
 
         <!-- Additional cards -->
 
-        <div class="information-card col-lg-4 col-md-6 col-9 pb-4">
-          <div class="d-flex justify-content-between">
-            <i class="information-card-icon bi bi-journal-check"></i>
-            <button class="button-default"><i class="bi bi-three-dots-vertical"></i></button>
+        <div class="col-12 col-md-6 col-lg-3 col-xl-3 pb-4">
+          <div class="information-card">
+            <div class="d-flex justify-content-between">
+              <i class="information-card-icon bi bi-journal-check"></i>
+              <button class="button-default"><i class="bi bi-three-dots-vertical"></i></button>
+            </div>
+            <div class="information-card-header mt-3">Projects Completed</div>
+            <p class="information-card-number">58</p>
           </div>
-          <div class="information-card-header mt-3">Projects Completed</div>
-          <p class="information-card-number">58</p>
         </div>
 
-        <div class="information-card col-lg-3 col-md-6 col-9 pb-4">
-          <div class="d-flex justify-content-between">
-            <i class="information-card-icon bi bi-globe2"></i>
-            <button class="button-default"><i class="bi bi-three-dots-vertical"></i></button>
+        <div class="col-12 col-md-12 col-lg-6 col-xl-6 pb-4">
+          <div class="information-card">
+            <div class="d-flex justify-content-between">
+              <i class="information-card-icon bi bi-currency-pound"></i>
+              <button class="button-default"><i class="bi bi-three-dots-vertical"></i></button>
+            </div>
+            <div class="information-card-header mt-3">Total income</div>
+            <p class="information-card-number">18,343.20</p>
           </div>
-          <div class="information-card-header mt-3">Website Visitors</div>
-          <p class="information-card-number">3,245</p>
         </div>
 
-        <div class="information-card col-lg-4 col-md-6 col-9 pb-4">
-          <div class="d-flex justify-content-between">
-            <i class="information-card-icon bi bi-graph-up"></i>
-            <button class="button-default"><i class="bi bi-three-dots-vertical"></i></button>
+        <div class="col-12 col-md-6 col-lg-3 col-xl-3 pb-4">
+          <div class="information-card">
+            <div class="d-flex justify-content-between">
+              <i class="information-card-icon bi bi-graph-up"></i>
+              <button class="button-default"><i class="bi bi-three-dots-vertical"></i></button>
+            </div>
+            <div class="information-card-header mt-3">Revenue Growth</div>
+            <p class="information-card-number">12.5%</p>
           </div>
-          <div class="information-card-header mt-3">Revenue Growth</div>
-          <p class="information-card-number">12.5%</p>
+        </div>
+
+        <!-- Additional cards -->
+
+        <div class="col-12 col-md-6 col-lg-3 col-xl-4 pb-4">
+          <div class="information-card">
+            <div class="d-flex justify-content-between">
+              <i class="information-card-icon bi bi-calendar-check"></i>
+              <button class="button-default"><i class="bi bi-three-dots-vertical"></i></button>
+            </div>
+            <div class="information-card-header mt-3">Events Scheduled</div>
+            <p class="information-card-number">15</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 col-xl-4 pb-4">
+          <div class="information-card">
+            <div class="d-flex justify-content-between">
+              <i class="information-card-icon bi bi-clock-history"></i>
+              <button class="button-default"><i class="bi bi-three-dots-vertical"></i></button>
+            </div>
+            <div class="information-card-header mt-3">Time Spent</div>
+            <p class="information-card-number">2h 36m</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-6 col-xl-4 pb-4">
+          <div class="information-card">
+            <div class="d-flex justify-content-between">
+              <i class="information-card-icon bi bi-bookmark-star"></i>
+              <button class="button-default"><i class="bi bi-three-dots-vertical"></i></button>
+            </div>
+            <div class="information-card-header mt-3">Bookmarks</div>
+            <p class="information-card-number">10</p>
+          </div>
         </div>
 
       </div>
     </div>
   </div>
 </section>
-
-
-
-<iandigo-client-table></iandigo-client-table>
-
-
-
-<iandigo-create-user></iandigo-create-user>

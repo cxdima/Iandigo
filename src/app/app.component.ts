@@ -16,7 +16,7 @@ export class AppComponent {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.isLandingPage = (event.url === '/' || event.url === '/#service'|| event.url === '/#pricing' || event.url === '/#faq');
-        this.isHomePage = (event.url === '/home');
+        this.isHomePage = (event.url === '/home' || event.url === '/clients' || event.url === '/messages' || event.url === '/invoices');
       }
     });
   }
