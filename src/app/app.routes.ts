@@ -7,9 +7,9 @@ import { LandingComponent } from "./pages/landing/landing.component";
 import { PageNotFoundComponent } from "./pages/page-not-found/page-not-found.component";
 
 import { HomeComponent } from "./pages/home/home.component";
-import { ClientsComponent } from "./components/clients/clients.component";
-import { MessagesComponent } from "./components/messages/messages.component";
-import { InvoicesComponent } from "./components/invoices/invoices.component";
+import { ClientsComponent } from "./pages/clients/clients.component";
+import { MessagesComponent } from "./pages/messages/messages.component";
+import { InvoicesComponent } from "./pages/invoices/invoices.component";
 
 
 const redirectUnauthorizedToLanding = () => redirectUnauthorizedTo(['/']);

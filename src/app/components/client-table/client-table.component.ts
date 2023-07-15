@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { UserService } from '../../services/user-service/user-service.service';
 
 @Component({
     selector: 'iandigo-client-table',
@@ -10,7 +9,7 @@ import { UserService } from '../../services/user-service/user-service.service';
 export class ClientTableComponent implements OnInit {
     clients: any[] = [];
 
-    constructor(private firestore: AngularFirestore, private userService: UserService) {}
+    constructor(private firestore: AngularFirestore) {}
 
     ngOnInit() {
         this.fetchClients();

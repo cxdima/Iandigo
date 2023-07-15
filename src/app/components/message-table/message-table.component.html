@@ -1,0 +1,45 @@
+<div class="pt-2">
+  <div class="row">
+    <div class="col" *ngIf="messages.length > 0">
+      <div class="row g-0 align-items-center py-3" *ngFor="let message of messages"
+           style="border-bottom: 1px solid #dee2e6;">
+        <div class="col-3 justify-content-between ms-2" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse-' + message.uid">
+          <h5>{{ message.name }}</h5>
+          <small>{{ message.email }}</small>
+        </div>
+        <div class="col justify-content-between" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse-' + message.uid">
+          <h5>{{ message.date }}</h5>
+          <small>Date Sent</small>
+        </div>
+        <div class="col justify-content-between" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse-' + message.uid">
+          <h5>{{ message.selectedPlan }}</h5>
+          <small>Subscription Type</small>
+        </div>
+        <div class="col d-flex justify-content-end">
+          <div class="dropdown">
+            <button class="btn btn-default" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+              <i class="bi bi-three-dots text-dark"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <button class="dropdown-item" (click)="deleteMessage(message.uid)">
+                <i class="bi bi-person-x text-black" style="font-size: 18px;"></i>
+                Delete Message
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="collapse" [id]="'collapse-' + message.uid">
+          <div class="col">
+            <div class="card card-body mt-2">
+              <p>{{ message.message }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col" *ngIf="messages.length === 0">
+      <p class="text-center">No messages found.</p>
+    </div>
+  </div>
+</div>

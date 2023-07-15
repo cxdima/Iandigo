@@ -20,9 +20,11 @@ import { ClientTableComponent } from './components/client-table/client-table.com
 import { CreateUserComponent } from './modals/create-user/create-user.component';
 import { HomeNavigationComponent } from './components/navigation/home-navigation/home-navigation.component';
 import { LandingNavigationComponent } from './components/navigation/landing-navigation/landing-navigation.component';
-import { MessagesComponent } from './components/messages/messages.component';
-import { ClientsComponent } from './components/clients/clients.component';
-import { InvoicesComponent } from './components/invoices/invoices.component';
+import { MessagesComponent } from './pages/messages/messages.component';
+import { ClientsComponent } from './pages/clients/clients.component';
+import { InvoicesComponent } from './pages/invoices/invoices.component';
+import { CreateMessageComponent } from './modals/create-message/create-message.component';
+import { MessageTableComponent } from './components/message-table/message-table.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { InvoicesComponent } from './components/invoices/invoices.component';
     MessagesComponent,
     ClientsComponent,
     InvoicesComponent,
+    CreateMessageComponent,
+    MessageTableComponent,
   ],
   imports: [
     BrowserModule,

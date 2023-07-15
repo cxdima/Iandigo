@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { UserService } from '../../services/user-service/user-service.service';
 
 @Component({
     selector: 'iandigo-create-user',
@@ -15,7 +14,7 @@ export class CreateUserComponent {
     totalPaid: number | undefined;
     uid: string | undefined;
 
-    constructor(private firestore: AngularFirestore, private userService: UserService) {}
+    constructor(private firestore: AngularFirestore) {}
 
     createUser() {
         if (!this.name || !this.email || !this.subscriptionDate || !this.subscriptionType || !this.totalPaid || !this.uid) {
@@ -46,7 +45,6 @@ export class CreateUserComponent {
                 this.subscriptionType = '';
                 this.totalPaid = undefined;
                 this.uid = '';
-                this.userService.addUser(user); // Add user to the UserService
             })
             .catch((error) => {
                 console.error('Error creating user:', error);
